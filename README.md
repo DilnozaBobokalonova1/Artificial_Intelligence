@@ -6,7 +6,7 @@ so that the sensors, actuators, and environment characteristics
 (size, shape, dirt placement, etc.) can be changed easily.
 2. Implemented an appropriate Bidirectional Search algorithm for 
 the missionaries and cannibals problem along with also creating a 
-Finite State Automata for the problem. Click on the uploaded .jpg image to see.
+Finite State Automata for the problem. Click on the uploaded *.pdf file to see.
 3. Solved the route finding problem between 2 points in a plane that has 8 convex
 polygons as obstacles. Found the shortest path using an A* search. This is an idealistic 
 navigation problem for a robot.
