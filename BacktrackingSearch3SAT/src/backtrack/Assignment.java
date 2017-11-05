@@ -16,10 +16,7 @@ public class Assignment<E> extends HashMap<String, E> { //each String contains t
 	 * @return Whether the assignment is complete.
 	 */
 	public boolean isComplete(CSP<E> csp) {
-		/* TODO
-		 * Check if all variables in the csp are actually contained
-		 * in the assignment.
-		 */
+		
 		return keySet().containsAll(csp.variables);
 		
 //		for(int i = 0; i < csp.variables.size(); i++) {
