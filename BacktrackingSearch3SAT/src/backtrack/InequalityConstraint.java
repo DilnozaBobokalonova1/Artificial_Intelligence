@@ -33,15 +33,6 @@ public class InequalityConstraint implements Constraint {
 		return !assignment.get(variable1).equals(assignment.get(variable2));
 		
 		
-		/* TODO
-		 * Check if the assignment is consistent with the constraint,
-		 * or if it violates it. It is consistent if the assigned values
-		 * of the two variables differ. Keep in mind, that if the assignment
-		 * does not contain an assigned value for both variables, the
-		 * constraint is not violated, and therefore consistent!
-		 */
-		
-		
 	}
 	
 	@Override
