@@ -78,18 +78,7 @@ public class AC3 {
 	 * @return
 	 */
 	private static <E> boolean revise(CSP<E> csp, String a, String b) {
-		/* TODO
-		 * You may want to use a temporary Assignment to check whether a constraint
-		 * is violated by any values for var1 and var2. Iterate over all domain values
-		 * of var1. Then iterate over all domain values of var2 and prepare the
-		 * temporary assignment accordingly. If all values for var2 produce an
-		 * inconsistent assignment, remove the current value from the domain of
-		 * var1. Hint: You cannot modify the domain as long as you are iterating over
-		 * it, therefore I recommend to temporarily store the values to be deleted in
-		 * a list or something, and then delete them all together after you iterated
-		 * over all domain values. Also, don't forget to return whether you actually
-		 * modified the domain of var1. 
-		 */
+	
 		Set<E> remove = new HashSet<E>();
 		
 		for(E va : csp.domains.get(a)) {
@@ -119,12 +108,7 @@ public class AC3 {
 	 * @return The neighbors of the given variable.
 	 */
 	private static Set<String> neighbors(CSP<?> csp, String var) {
-		/* TODO
-		 * Iterate over all constraints and check if var is contained
-		 * in the constraint's scope. If so, all _other_ variables of
-		 * the constraint's scope are neighbors.
-		 */
-		
+	
 		Set<String> s = new HashSet<String>();
 		
 		for(Constraint c : csp.constraints) {
