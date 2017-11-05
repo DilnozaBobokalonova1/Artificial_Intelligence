@@ -54,22 +54,7 @@ public class MinConflicts implements CSPSolver {
 			        }
 			}
 			temp = var;
-			current.put(var, val);
-		
-//		  for i = 1 to max_steps do
-//		   if current is a solution for csp then return current
-//		    var <- a randomly chosen conflicted variable from csp.VARIABLES
-//		    value <- the value v for var that minimizes CONFLICTS(var, v, current, csp)
-//		    set var = value in current
-//		  return failure
-//		  
-//		  Most of it is straight forward, because there is a separate
-//		  function for it. Only finding the value that minimizes the
-//		  number of conflicts is a little more complicated. However,
-//		  you should use the function conflicts() for this purpose.
-//		  Also, please note that "failure" is "null" in this implementation.
-//		  You should return the result like "new CSPResult(current, i);"
-//		 
+			current.put(var, val);		 
 		
 	}
 		return null;
@@ -83,14 +68,7 @@ public class MinConflicts implements CSPSolver {
 	 * @return A randomly chosen conflicted variable.
 	 */
 	private static <E> String getRandomConflictedVariable(Assignment<E> current, CSP<E> csp, String temp) {
-		/* TODO
-		 * First, you should create an initially empty set of conflicted variables.
-		 * Then, iterate over all constraints, and if it is not consistent, add
-		 * all the variables from its scope to the set of conflicted variables.
-		 * Afterwards, just return a randomly selected one of them. (Hint: make
-		 * sure that variables that appear in multiple constraints are not
-		 * selected with a higher probability, they should be selected unbiased).
-		 */
+
 		Set<String> conflict = new HashSet<String>();
 		for(Constraint c: csp.constraints) {
 			if(!c.isConsistent(current)) {
@@ -151,12 +129,7 @@ public class MinConflicts implements CSPSolver {
 	 * @return The number of conflict given the current assignment, but with var=value
 	 */
 	private static <E> int conflicts(String var, E value, Assignment<E> current, CSP<E> csp) {
-		/* TODO
-		 * You might want to temporarily modify the assignment
-		 * to set var = value (undo this afterwards!). Then
-		 * iterate over all constraints and count the number of
-		 * insonsistent constraints.
-		 */
+
 		int incons = 0;
 		E val = null;
 	    if(current.containsKey(var)){
