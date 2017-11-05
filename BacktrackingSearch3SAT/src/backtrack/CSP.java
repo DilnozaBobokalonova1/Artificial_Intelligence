@@ -29,10 +29,7 @@ public class CSP<E> {
 	 * @return Whether all constraints are fulfilled
 	 */
 	public boolean isConsistent(Assignment<E> assignment) {
-		/* TODO
-		 * Check if every single constraint is consistent
-		 * with the assignment.
-		 */
+	
 		for(Constraint c : constraints) {
 			if(!c.isConsistent(assignment)) return false;
 		}
