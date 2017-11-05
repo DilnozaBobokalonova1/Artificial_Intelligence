@@ -27,11 +27,7 @@ public class BacktrackingCSPSolver implements CSPSolver {
 	 * @return A variable that is not assigned yet.
 	 */
 	protected <E> String selectUnassignedVariable(CSP<E> csp, Assignment<E> assignment) {
-		/* TODO
-		 * Return any unassigned variable. For the generic backtracking search
-		 * you can e.g. return a randomly chosen unassigned variable, or just the
-		 * first one.
-		 */
+	
 		
 		for(int i = 0; i < csp.variables.size(); i++) {
 			if(!assignment.containsKey(csp.variables.get(i))) {
@@ -103,32 +99,6 @@ public class BacktrackingCSPSolver implements CSPSolver {
 			assignment.remove(var);
 			
 		}
-//		   TODO
-//		  The implementation can follow very much the pseudo code in the book:
-//		  
-//		  if assignment is complete then return assignment
-//		  var <- SELECT-UNASSIGNED-VARIABLE(csp)
-//		  for each value in ORDER-DOMAIN-VALUES(var, assignment, csp) do
-//		    if value is consistent with assignment then
-//		      add {var = value} to assignment
-//		      inferences <- INFERENCE(csp, var, value)
-//		      if inferences != failure then
-//		        add inferences to csp
-//		        result <- BACKTRACK(assignment, csp)
-//		        remove inferences from csp
-//		        if result != failure then
-//		          return result
-//		      remove {var = value} from assignment
-//		  return failure
-//		  
-//		  Please note that "failure" is represented as null in this implementation.
-//		  I implemented the inferences slightly different than the book suggests:
-//		  The method inference() additionally needs the current assignment as a
-//		  parameter, and the inference is instead applied to the csp, not to the
-//		  assignment. This is realized by the methods Inference.reduceDomain() and
-//		  Inference.restoreDomain(). I slightly modified the pseudo code in contrast
-//		  to the code in the book to comply with the modified interface of the
-//		  inference.
 		 
 		return null;
 	}
