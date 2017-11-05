@@ -12,3 +12,7 @@ polygons as obstacles. Found the shortest path using an A* search. This is an id
 navigation problem for a robot.
 4. Implemented a Genetic Algorithm used to solve a Graph-Coloring Problem which belongs to 
 the class of NP-Complete. Used 10 vertices and 4 colors. Could be used for more. 
+5. Implement an algorithm to solve The Four Color problem and the Sudoku using backtracking, backtracking with
+forward checking, backtracking with AC-3, and min-conflicts.
+Please run the algorithms with and without an initial assignment
+for one state. 
